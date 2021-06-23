@@ -1,0 +1,26 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_ToUpper",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "ToUpper",
+        "name": "大写转换",
+        "desc": "将指定字符串转换成大写形式(非英文忽略),返回大写字符串。\n参数1--原字符串(字符串类型)\n返回值为字符串类型。 ",
+        "example":"ToUpper(\"abc\")返回值为\"ABC\"。 ",
+        "entry": "com.toone.v3.platform.function.client.ToUpper.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "原字符串",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

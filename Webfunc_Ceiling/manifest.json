@@ -1,0 +1,26 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_Ceiling",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "Ceiling",
+        "name": "小数的最小整数值",
+        "desc": "小数的最小整数值(返回大于或等于指定小数的最小整数值)。\n参数1--指定的数(数值类型)； \n返回值类型：整数类型。",
+        "example":"Ceiling(2.555) 返回值为3",
+        "entry": "com.toone.v3.platform.function.client.Ceiling.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "number",
+            "desc": "需转换的数值",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "integer",
+            "desc": ""
+        }
+    }]
+}

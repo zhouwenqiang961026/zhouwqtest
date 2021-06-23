@@ -1,0 +1,31 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_Pow",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "Pow",
+        "name": "指定数字的幂",
+        "desc": "返回指定数字的指定次幂。\n参数1--指数（数字类型）； \n参数2--幂（数字类型）； \n返回值类型：数字类型。 ",
+        "example":"代码示例：Pow(3,2)返回值为9。 ",
+        "entry": "com.toone.v3.platform.function.client.Pow.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "number",
+            "desc": "",
+            "required": true
+        },
+        {
+            "type": "number",
+            "desc": "",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "number",
+            "desc": ""
+        }
+    }]
+}

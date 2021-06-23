@@ -1,0 +1,20 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_IsLogin",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "IsLogin",
+        "name": "判断当前用户是否已登录",
+        "desc": "判断当前用户是否已登录\n无参数； \n返回值为布尔。",
+        "example":"IsLogin() 当前用户是否已登录； ",
+        "entry": "com.toone.v3.platform.function.client.IsLogin.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [],
+        "output": {
+            "type": "boolean",
+            "desc": ""
+        }
+    }]
+}

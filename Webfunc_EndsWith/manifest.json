@@ -1,0 +1,31 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_EndsWith",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "EndsWith",
+        "name": "是否以指定串结尾",
+        "desc": "检查指定的字符串是否以另一指定的字符串结尾，是则返回True。\n参数1--被检查字符串(字符串类型)；\n参数2--指定的字符串(字符串类型)；\n返回值为布尔值。",
+        "example":"EndsWith(\"V平台\",\"平台\")，返回值为True",
+        "entry": "com.toone.v3.platform.function.client.EndsWith.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "被检查字符串",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "指定的字符串",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "boolean",
+            "desc": ""
+        }
+    }]
+}

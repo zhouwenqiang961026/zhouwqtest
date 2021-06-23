@@ -1,0 +1,20 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_GetDevicePlatform",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "GetDevicePlatform",
+        "name": "获取终端设备的OS信息",
+        "desc": "获取终端设备的OS信息，类型：Android、iOS等。\n返回值类型：字符串类型。\n返回值示例：安卓设备返回值为：Android；苹果设备返回值为：iOS",
+        "example":"GetDevicePlatform() 返回终端设备的OS信息（注意大小写）",
+        "entry": "com.toone.v3.platform.function.client.GetDevicePlatform.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

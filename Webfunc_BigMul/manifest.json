@@ -1,0 +1,31 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_BigMul",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "BigMul",
+        "name": "整数乘积",
+        "desc": "将两个整数相乘，并返回值为乘积。乘数支持最大2147483648(32位最大值)。\n参数1--乘数1(整型)； \n参数2--乘数2(整型)； \n返回值为整数。",
+        "example":"BigMul(3,5) 返回值为15",
+        "entry": "com.toone.v3.platform.function.client.BigMul.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "number",
+            "desc": "乘数",
+            "required": true
+        },
+        {
+            "type": "number",
+            "desc": "乘数",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "integer",
+            "desc": ""
+        }
+    }]
+}

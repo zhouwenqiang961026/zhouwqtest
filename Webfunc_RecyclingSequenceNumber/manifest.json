@@ -1,0 +1,31 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_RecyclingSequenceNumber",
+    "version":"3.0.0",
+    "plugins": [{
+        "type": "function",
+        "code": "RecyclingSequenceNumber",
+        "name": "作废流水号",
+        "desc": "作废流水号\n参数1：流水号种子，字符串类型。最长128位字符串，建议64位或者更短\n参数2：需要废弃的流水号，整数类型。\n返回值类型：无返回值",
+        "example":"RecyclingSequenceNumber(\"123456\", 89)",
+        "entry": "com.toone.v3.platform.function.client.RecyclingSequenceNumber.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "流水号种子",
+            "required": true
+        },
+        {
+            "type": "number",
+            "desc": "需要废弃的流水号",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "void",
+            "desc": ""
+        }
+    }]
+}

@@ -1,0 +1,26 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_MD5EncryptByUTF8",
+    "version":"3.2.0",
+    "plugins": [{
+        "type": "function",
+        "code": "MD5EncryptByUTF8",
+        "name": "utf-8字符集的MD5加密",
+        "desc": "utf-8字符集的MD5加密\n参数1：需要加密的字符串（字符串类型）\n返回值为字符串类型",
+        "example":"代码示例：MD5EncryptByUTF8(\"同望\")，返回值为：wd7VFY1HGgjdEK2kbS7L+w==",
+        "entry": "com.toone.v3.platform.function.client.MD5EncryptByUTF8.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

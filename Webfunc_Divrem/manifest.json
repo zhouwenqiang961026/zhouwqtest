@@ -1,0 +1,31 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_Divrem",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "Divrem",
+        "name": "整数商",
+        "desc": "两数相除后的整数商，返回值为整数。\n参数1--被除数（数字类型）； \n参数2--除数（数字类型，不能为0）； \n返回值类型：整数类型。该函数是取两数相除后的整数商，即相除后的整数部分不会保留任何小数，结果只保留整数部分（非四舍五入）",
+        "example":"Divrem(54,8) 返回值为6",
+        "entry": "com.toone.v3.platform.function.client.Divrem.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "number",
+            "desc": "被除数",
+            "required": true
+        },
+        {
+            "type": "number",
+            "desc": "除数",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "integer",
+            "desc": ""
+        }
+    }]
+}

@@ -1,0 +1,26 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_TrimEnd",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "TrimEnd",
+        "name": "后导空白字符移除",
+        "desc": "移除字符串末尾的空格，返回移除后的字符串。\n参数1--原字符串(字符串类型)；\n返回值为字符串类型。",
+        "example":"TrimEnd(\"  abc  \")，返回值为\"  abc\"。",
+        "entry": "com.toone.v3.platform.function.client.TrimEnd.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "原字符串",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

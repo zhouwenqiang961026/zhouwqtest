@@ -1,0 +1,25 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_GetBrowserInfo",
+    "version":"3.3.0",
+    "plugins": [{
+        "type": "function",
+        "code": "GetBrowserInfo",
+        "name": "获取浏览器信息",
+        "desc": "获取浏览器信息（名称/版本号）。\n参数1--字符串(字符串类型，非必填，缺省：name，支持类型：name，version之一)；\n返回值为字符串类型。",
+        "example":"GetBrowserInfo(\"name\") 返回：浏览器类型，例如ie/chrome等。GetBrowserInfo(\"version\") 返回：浏览器版本号",
+        "entry": "com.toone.v3.platform.function.client.GetBrowserInfo.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": ""
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

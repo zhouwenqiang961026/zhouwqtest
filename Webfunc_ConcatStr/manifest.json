@@ -1,0 +1,29 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_ConcatStr",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "ConcatStr",
+        "name": "字符串合并",
+        "desc": "按参数顺序合并字符串。可以任意多个参数。\n参数1--字符串(字符串类型)； \n参数n--字符串(字符串类型)； \n返回值为字符串类型。",
+        "example":"ConcatStr(\"hello\",\" \",\"world\") 返回值为\"hello world\"",
+        "entry": "com.toone.v3.platform.function.client.ConcatStr.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [{
+            "index":"[0,2)",
+            "type": "text",
+            "desc": "需要合并的字符串",
+            "required": true
+        },{
+            "index":"[2,+∞)",
+            "type": "text",
+            "desc": "需要合并的字符串"
+        }],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

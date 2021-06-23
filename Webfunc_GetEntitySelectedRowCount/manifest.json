@@ -1,0 +1,26 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_GetEntitySelectedRowCount",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "GetEntitySelectedRowCount",
+        "name": "获取界面实体选中行数",
+        "desc": "获取界面实体选中行数。\n参数1--实体编码（字符串类型）。\n返回值类型：整型",
+        "example":"GetEntitySelectedRowCount(\"EntityName\")",
+        "entry": "com.toone.v3.platform.function.client.GetEntitySelectedRowCount.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "integer",
+            "desc": ""
+        }
+    }]
+}

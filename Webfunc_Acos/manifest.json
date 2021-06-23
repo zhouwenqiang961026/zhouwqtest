@@ -1,0 +1,24 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_Acos",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "Acos",
+        "name": "反余弦",
+        "desc": "反余弦，返回余弦值为指定值的角度。\n参数1--指定的角度(小数类型)，取值范围:[-1,1]； \n返回值为小数。",
+        "example":"Acos(1)返回值为0",
+        "entry": "com.yindangu.vplatform.function.client.acos.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [{
+            "type": "number",
+            "desc": "余弦值",
+            "required": true
+        }],
+        "output": {
+            "type": "number",
+            "desc": "反余弦值"
+        }
+    }]
+}

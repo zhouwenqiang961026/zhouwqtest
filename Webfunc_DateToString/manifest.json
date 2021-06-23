@@ -1,0 +1,31 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_DateToString",
+    "version":"3.5.0",
+    "plugins": [{
+        "type": "function",
+        "code": "DateToString",
+        "name": "根据指定格式，将时间格式化为字符串返回。",
+        "desc": "根据指定格式，将时间格式化为字符串返回。\n参数1--格式串(字符串类型)；\n参数2--时间(时间类型或满足时间格式的字符串类型)；\n返回值为字符串类型。",
+        "example":"DateToString(\"yyyy-MM-dd HH:mm:ss\",DateTimeNow())，返回值为\"2012-04-19 12:03:44\"",
+        "entry": "com.toone.v3.platform.function.client.DateToString.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "格式串",
+            "required": true
+        },
+        {
+            "type": "longDate",
+            "desc": "时间",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

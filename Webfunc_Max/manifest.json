@@ -1,0 +1,31 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_Max",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "Max",
+        "name": "求两数最大值",
+        "desc": "返回两个数字中较大的一个。\n参数1--比较值1(数字类型)； \n参数2--比较值2(数字类型)； \n返回值类型：数字类型（值大的数）。 ",
+        "example":"代码示例：Max(3,5) 返回值为5。 ",
+        "entry": "com.toone.v3.platform.function.client.Max.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "number",
+            "desc": "",
+            "required": true
+        },
+        {
+            "type": "number",
+            "desc": "",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "number",
+            "desc": ""
+        }
+    }]
+}

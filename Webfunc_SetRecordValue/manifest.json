@@ -1,0 +1,41 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_SetRecordValue",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "SetRecordValue",
+        "name": "批量设置记录字段值",
+        "desc": "根据索引值（目前为id值），获取实体记录，批量设置字段值，最后更新数据到实体中。\n参数一：实体名称（字符串类型）;\n参数二：记录索引值（字符串类型）;\n参数三：字段编码集合（数组类型，与函数ArgsToArray搭配使用）;\n参数四：字段值集合，与字段编码集合一一对应（数组类型，与函数ArgsToArray搭配使用）;\n无返回值。",
+        "example":"SetRecordValue(\"EntityName\",\"index\",fields,values)",
+        "entry": "com.toone.v3.platform.function.client.SetRecordValue.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "实体编码",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "记录索引值",
+            "required": true
+        },
+        {
+            "type": "array",
+            "desc": "字段编码集合",
+            "required": true
+        },
+        {
+            "type": "array",
+            "desc": "字段值集合",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "void",
+            "desc": ""
+        }
+    }]
+}

@@ -1,0 +1,36 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "WebFunc_GetSelectedDateToEntity",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "GetSelectedDateToEntity",
+        "name": "获取日历控件选中日期并新增到前台实体",
+        "desc": "获取日历控件选中日期并新增到前台实体。\n参数1--控件编码(字符串类型)； \n参数2--实体编码(字符串类型)； \n参数3--实体字段编码(字符串类型)； \n返回值：无",
+        "example":"GetSelectedDateToEntity(\"JGCalendar1\", \"Entity1\", \"date\")",
+        "entry": "com.toone.v3.platform.function.client.GetSelectedDateToEntity.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "void",
+            "desc": ""
+        }
+    }]
+}

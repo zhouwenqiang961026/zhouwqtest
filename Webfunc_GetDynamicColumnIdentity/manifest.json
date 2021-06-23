@@ -1,0 +1,31 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_GetDynamicColumnIdentity",
+    "version":"3.3.0",
+    "plugins": [{
+        "type": "function",
+        "code": "GetDynamicColumnIdentity",
+        "name": "获取动态列列标识信息",
+        "desc": "获取动态列列标识信息，在列表或树表动态列链接事件中使用，标识字段与加载动态交叉表到实体规则中列标识字段对应。\n参数1,控件编码；\n参数2,标识字段编码；\n返回值类型：与参数二所选字段的类型一致",
+        "example":"GetDynamicColumnIdentity(\"JGTreeGrid1\",\"fieldCode1\")，返回指定列的标识信息",
+        "entry": "com.toone.v3.platform.function.client.GetDynamicColumnIdentity.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "any",
+            "desc": ""
+        }
+    }]
+}

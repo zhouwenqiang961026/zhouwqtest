@@ -1,0 +1,33 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_Convert",
+    "version":"3.5.0",
+    "plugins": [{
+        "type": "function",
+        "code": "Convert",
+        "name": "格式转换，将指定值转换成指定格式返回",
+        "desc": "格式转换，将指定值转换成指定格式返回。\n参数1--传入的数据(各种类型)；\n参数2--转换的类型，1-数字,2-字符串,3-布尔值； \n返回值为不确定的类型，根据参数2的格式而定。",
+        "example":"Convert(3,2) 返回值为\"3\"",
+        "entry": "com.toone.v3.platform.function.client.Convert.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "range",
+            "typeRange":["char","text","number","boolean","date","longDate","integer"],
+            "desc": "来源数据",
+            "required": true
+        },
+        {
+            "type": "integer",
+            "desc": "转换的类型",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "range",
+            "typeRange":["char","text","number","boolean","date","longDate","integer"],
+            "desc": ""
+        }
+    }]
+}

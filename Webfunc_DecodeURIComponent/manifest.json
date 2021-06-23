@@ -1,0 +1,26 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_DecodeURIComponent",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "DecodeURIComponent",
+        "name": "将字符串作为URI组件进行解码",
+        "desc": "将字符串作为URI组件进行解码。\n参数1--需要解码的字符串。\n返回值为字符串类型。",
+        "example":"DecodeURIComponent(\"www.baidu.com%2Fs%3Fwd%3D%E5%90%8C%E6%9C%9B%E7%A7%91%E6%8A%80\")返回值为经过js原生方法解码的字符串",
+        "entry": "com.toone.v3.platform.function.client.DecodeURIComponent.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "需要解码的字符串",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

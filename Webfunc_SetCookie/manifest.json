@@ -1,0 +1,51 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_SetCookie",
+    "version":"3.5.0",
+    "plugins": [{
+        "type": "function",
+        "code": "SetCookie",
+        "name": "设置cookie",
+        "desc": "设置cookie的值。\n参数1--cookie名称（必填，字符串类型)；\n参数2--cookie值（必填，字符串类型)；\n参数3--cookie有效期（非必填，字符串类型，合法的日期，缺省值：2500-01-01 00:00:00)；\n参数4--cookie服务器路径（非必填，字符串类型，缺省值：/)；\n参数5--cookie域名（非必填，字符串类型，缺省值：当前域名)；\n参数6--是否通过安全的HTTPS（非必填，布尔型，False表示HTTP，True表示HTTPS，缺省值：False)；\n参数7--是否可以通过客户端脚本访问（非必填，布尔型，缺省值：True)；\n返回值为布尔类型",
+        "example":"SetCookie(\"CookieName\",\"Value\",\"2017-01-01 00:00:00\",\"/\",\"baidu.com\",False,True) 操作成功返回True",
+        "entry": "com.toone.v3.platform.function.client.SetCookie.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "cookie名称",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "cookie值",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "cookie有效期"
+        },
+        {
+            "type": "text",
+            "desc": "cookie服务器路径"
+        },
+        {
+            "type": "text",
+            "desc": "cookie域名"
+        },
+        {
+            "type": "boolean",
+            "desc": "是否通过安全的HTTPS"
+        },
+        {
+            "type": "boolean",
+            "desc": "是否可以通过客户端脚本访问"
+        }
+        ],
+        "output": {
+            "type": "boolean",
+            "desc": ""
+        }
+    }]
+}

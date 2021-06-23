@@ -1,0 +1,31 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_MinColumn",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "MinColumn",
+        "name": "求指定实体的某个字段的最小值",
+        "desc": "查询指定实体的字段的最小值并返回。\n参数1--实体编码(字符串类型),实体可以是界面实体(EntityCode)、方法输入(BR_IN_PARENT.entityCode)、方法输出(BR_OUT_PARENT.entityCode)、方法变量(BR_VAR_PARENT.entityCode)、窗体输入实体(@entityCode)； \n参数2--字段编码(字符串类型)； \n返回值类型：数字类型。 ",
+        "example":"MinColumn(\"EntityCode\",\"ColumnCode\")返回界面实体[EntityCode]的\"ColumnCode\"字段的最小值。 ",
+        "entry": "com.toone.v3.platform.function.client.MinColumn.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "number",
+            "desc": ""
+        }
+    }]
+}

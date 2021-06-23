@@ -1,0 +1,29 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_WXPageRedirection",
+    "version":"3.2.0",
+    "plugins": [{
+        "type": "function",
+        "code": "WXPageRedirection",
+        "name": "微信页面重定向",
+        "desc": "微信页面重定向。\n参数1--构件编码(字符串类型)；\n参数2--窗体编码(字符串类型)；\n返回值类型：无返回值。\n注：该函数只能在微信环境中使用。",
+        "example":"WXPageRedirection(\"demo\",\"form1\")，页面跳转到demo构件的form1窗体",
+        "entry": "com.toone.v3.platform.function.client.WXPageRedirection.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "构件编码"
+        }，
+        {
+            "type": "text",
+            "desc": "窗体编码"
+        }
+        ],
+        "output": {
+            "type": "void",
+            "desc": ""
+        }
+    }]
+}

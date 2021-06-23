@@ -1,0 +1,30 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_UnixtimestampToDateTime",
+    "version":"3.5.0",
+    "plugins": [{
+        "type": "function",
+        "code": "UnixtimestampToDateTime",
+        "name": "根据时间戳转成日期时间",
+        "desc": "根据时间戳转成日期时间。\n参数1--时间戳(字符串类型),单位是秒,必填\n参数2--日期时间格式(字符串类型),格式例如:yyyy-MM-dd HH:mm:ss、yyyy/MM/dd HH:mm:ss、yyyy年MM月dd日 HH时mm分ss秒,默认格式:yyyy-MM-dd HH:mm:ss\n返回值为字符串类型",
+        "example":"UnixtimestampToDateTime(\"1535444053\",\"yyyy-MM-dd HH:mm:ss\"),返回值为:2018-08-28 16:14:13",
+        "entry": "com.toone.v3.platform.function.client.UnixtimestampToDateTime.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "时间戳",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "日期时间格式"
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

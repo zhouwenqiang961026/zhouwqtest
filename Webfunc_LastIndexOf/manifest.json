@@ -1,0 +1,35 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_LastIndexOf",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "LastIndexOf",
+        "name": "倒序查找指定",
+        "desc": "从头到指定索引位置（0基准）之间，找到最后一个匹配串，并返回其索引位置；没有找到返回-1。\n参数1--原字符串(字符串类型)；\n参数2--查找字符串(字符串类型)； \n参数3--检查截止位置(整数类型),可忽略，忽略则检查到末尾； \n返回值为整数类型。",
+        "example":"LastIndexOf(\"abcabbcadabc\",\"bc\",9)，返回值为5",
+        "entry": "com.toone.v3.platform.function.client.LastIndexOf.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        },
+        {
+            "type": "integer",
+            "desc": ""
+        }
+        ],
+        "output": {
+            "type": "integer",
+            "desc": ""
+        }
+    }]
+}

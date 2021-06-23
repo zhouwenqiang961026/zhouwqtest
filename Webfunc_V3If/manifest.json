@@ -1,0 +1,39 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_V3If",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "V3If",
+        "name": "三元运算函数",
+        "desc": "先计算条件表达式的结果，再根据结果返回参数值；结果为true,则返回第1个参数，否则返回第2个参数。\n参数1--条件表达式（布尔类型） ；\n参数2--条件表达式为true时返回值（各种类型） ；\n参数3--条件表达式为false时返回值（各种类型）；\n返回值类型不定，由参数2，或者参数3决定。",
+        "example":"V3If(1==1,20,30) 返回值为 20",
+        "entry": "com.toone.v3.platform.function.client.V3If.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "boolean",
+            "desc": "条件表达式",
+            "required": true
+        },
+        {
+            "type": "range",
+            "typeRange":["char","text","number","boolean","date","longDate","integer"],
+            "desc": "条件表达式为true时返回值",
+            "required": true
+        },
+        {
+            "type": "range",
+            "typeRange":["char","text","number","boolean","date","longDate","integer"],
+            "desc": "条件表达式为false时返回值",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "range",
+            "typeRange":["char","text","number","boolean","date","longDate","integer"],
+            "desc": ""
+        }
+    }]
+}

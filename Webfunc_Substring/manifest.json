@@ -1,0 +1,36 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_Substring",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "Substring",
+        "name": "子链提取",
+        "desc": "从字符串指定索引（0基准）位置开始提取指定长度的该字符串的子串,返回提取出的子串。\n参数1--原字符串(字符串类型)；\n参数2--开始提取子串的索引位置(整型，不能小于0，第1个字符索引为0)；\n参数3--提取子串的长度(整型，大于0)； \n返回值为字符串类型。",
+        "example":"Substring(\"abcdefg\",2,3)，返回值为\"cde\"。",
+        "entry": "com.toone.v3.platform.function.client.Substring.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "原字符串",
+            "required": true
+        },
+        {
+            "type": "integer",
+            "desc": "开始提取子串的索引位置",
+            "required": true
+        },
+        {
+            "type": "integer",
+            "desc": "提取子串的长度",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

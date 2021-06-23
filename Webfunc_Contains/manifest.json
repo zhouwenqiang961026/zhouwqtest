@@ -1,0 +1,31 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_Contains",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "Contains",
+        "name": "验证包含",
+        "desc": "检查指定的字符串中是否包含另一指定的字符串，包含则返回True。\n参数1--原字符串(字符串类型)；\n参数2--指定的字符串(字符串类型)。 \n返回值为布尔值。",
+        "example":"Contains(\"V平台\",\"平\")，返回值为True",
+        "entry": "com.toone.v3.platform.function.client.Contains.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "原字符串",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "是否被包含的字符串",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "boolean",
+            "desc": ""
+        }
+    }]
+}

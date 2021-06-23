@@ -1,0 +1,31 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_GetControlProperty",
+    "version":"3.2.0",
+    "plugins": [{
+        "type": "function",
+        "code": "GetControlProperty",
+        "name": "根据控件编码及属性编码获取控件属性值",
+        "desc": "根据控件编码及属性编码获取控件属性值\n参数1--控件编码，必填（字符串类型）；\n参数2--属性编码，必填（字符串类型），例如Visible、ReadOnly、Enable、Label、Value等；\n返回值为不定类型（根据属性类型确定）。",
+        "example":"GetControlProperty(\"ControlCode\",\"ControlPropertyCode\")，返回指定控件指定属性的值",
+        "entry": "com.toone.v3.platform.function.client.GetControlProperty.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "any",
+            "desc": ""
+        }
+    }]
+}

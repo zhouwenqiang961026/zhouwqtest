@@ -1,0 +1,27 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_EvalExpression",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "EvalExpression",
+        "name": "执行表达式函数",
+        "desc": "校验执行表达式的函数\n参数1--为字符串表达式。\n返回值为不定类型。",
+        "example":"EvalExpression(\"@@userName\") 返回系统变量userName的值",
+        "entry": "com.toone.v3.platform.function.client.EvalExpression.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "表达式字符串",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "range",
+            "typeRange":["char","text","number","boolean","date","longDate","integer"],
+            "desc": ""
+        }
+    }]
+}

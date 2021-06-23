@@ -1,0 +1,16 @@
+{
+  "name": "Webfunc_Trim",
+  "version": "1.0.0",
+  "description": "移除字符串头尾空格或移除字符串中所有空格",
+  "main": "./src/index.js",
+  "scripts": {
+    "build": "rollup -c rollup.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-terser": "^7.0.2"
+  }
+}

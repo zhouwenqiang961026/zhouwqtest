@@ -1,0 +1,35 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_Encrypt",
+    "version":"3.3.0",
+    "plugins": [{
+        "type": "function",
+        "code": "Encrypt",
+        "name": "对字符串进行加密",
+        "desc": "对字符串进行加密，加密算法目前支持bcrypt、md5、standardMd5、sha1、crypto-sha1、base64及aes加密方式。\n参数1：需要加密的字符串(字符串类型，必填)；\n参数2：加密类型（字符串类型，必填，目前支持bcrypt、md5、standardMd5、sha1、crypto-sha1、base64及aes方式）；\n参数3：加密密钥（字符串类型，选填，aes方式需要填）；\n其中md5加密算法为MD5+BASE64算法，standardMd5为MD5标准加密算法，sha1为ASCII中文编码方式（不推荐），crypto-sha1为标准Unicode中文编码方式（推荐）；\n返回值类型：加密后的字符串（字符串类型）。",
+        "example":"Encrypt(\"12345\",\"bcrypt\")，返回值为对应加密方式加密后的字符串",
+        "entry": "com.toone.v3.platform.function.client.Encrypt.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "需要加密的字符串",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "加密类型",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "加密密钥"
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

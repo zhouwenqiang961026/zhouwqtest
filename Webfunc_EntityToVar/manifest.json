@@ -1,0 +1,26 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_EntityToVar",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "EntityToVar",
+        "name": "实体序列化成字符串",
+        "desc": "将一个或者多个实体序列化成字符串。\n参数1--字符串。 \n返回值为字符串类型。",
+        "example":"EntityToVar(\"para1,para2,...,paran\")参数字符串表示一个或者多个实体名称以逗号分隔的字符串",
+        "entry": "com.toone.v3.platform.function.client.EntityToVar.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "实体编码",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

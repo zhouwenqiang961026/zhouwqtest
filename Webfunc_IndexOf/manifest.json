@@ -1,0 +1,35 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_IndexOf",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "IndexOf",
+        "name": "查找指定字符串的位置",
+        "desc": "检查指定字符串在被检查串中的指定位置后的第一个匹配项的位置（0基准）,返回查找结果,没有找到返回-1。\n参数1--原字符串(字符串类型)；\n参数2--指定字符串(字符串类型)；\n参数3--起始检查位置(整数类型)，可忽略，忽略则从头开始检查； \n返回值为整数类型。",
+        "example":"IndexOf(\"abcabbaab\",\"bc\",0) 返回值为1",
+        "entry": "com.toone.v3.platform.function.client.IndexOf.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        },
+        {
+            "type": "integer",
+            "desc": ""
+        }
+        ],
+        "output": {
+            "type": "integer",
+            "desc": ""
+        }
+    }]
+}

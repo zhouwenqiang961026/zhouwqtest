@@ -1,0 +1,30 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_GetEntityRowCount",
+    "version":"3.5.0",
+    "plugins": [{
+        "type": "function",
+        "code": "GetEntityRowCount",
+        "name": "从指定的实体获取记录数",
+        "desc": "从指定的实体获取记录数。\n参数1--实体名称。界面实体为字符串类型，其他变量实体需要加上变量的前缀\n参数2是一个字符串，其运算结果应该是布尔值。如果该参数省略，则返回实体总记录数。 \n若参数2中的条件值来源变量，则参数2需要用一个变量代替，如:\nGetEntityRowCount(\"BR_IN_PARENT.TableName\",BR_VAR_PARENT.cs2)\n其中BR_VAR_PARENT.cs2的值=ConcatStr(\"[TableName].[FieldValue]==\",BR_VAR_PARENT.cs2_z)\n若BR_VAR_PARENT.cs2_z为字符串，拼接参数2时，还需要加上双引号（将双引号存储到变量中，再拼接），如：\nConcatStr(\"[TableName].[FieldValue]==\",BR_VAR_PARENT.syh,BR_VAR_PARENT.cs2_z,BR_VAR_PARENT.syh)\n其中BR_VAR_PARENT.syh中存储的是英文双引号常量\n返回值类型：整型",
+        "example":"界面实体：GetEntityRowCount(\"TableName\",\"[TableName].[FieldValue]==1\")活动集实体：GetEntityRowCount(\"BR_IN_PARENT.TableName\",\"[TableName].[FieldValue]==1\")，返回符合条件的实体记录数",
+        "entry": "com.toone.v3.platform.function.client.GetEntityRowCount.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": ""
+        }
+        ],
+        "output": {
+            "type": "integer",
+            "desc": ""
+        }
+    }]
+}

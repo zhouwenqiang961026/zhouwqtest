@@ -1,0 +1,30 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_GetGridComp",
+    "version":"3.2.0",
+    "plugins": [{
+        "type": "function",
+        "code": "GetGridComp",
+        "name": "根据实体名获取表格控件(列表+树表)编码",
+        "desc": "根据实体名获取表格控件(列表+树表)编码\n参数1：实体名，必填(字符串类型)；\n参数2：下标，选填(整型，不填的话默认为0)；\n返回值为字符串类型。",
+        "example":"GetGridComp(\"book\",1)，返回值为\"JGDataGrid1\"",
+        "entry": "com.toone.v3.platform.function.client.GetGridComp.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        },
+        {
+            "type": "integer",
+            "desc": ""
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

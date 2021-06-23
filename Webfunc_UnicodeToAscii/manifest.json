@@ -1,0 +1,26 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_UnicodeToAscii",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "UnicodeToAscii",
+        "name": "Unicode转Ascii",
+        "desc": "将指定Unicode字符串转换成,返回Ascii字符串。 \n参数1--字符串(字符串类型)\n返回值为字符串类型。",
+        "example":"UnicodeToAscii(\"&#21516;&#26395;&#84;&#111;&#111;&#110;&#101;\")返回值为\"同望Toone\"。",
+        "entry": "com.toone.v3.platform.function.client.UnicodeToAscii.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "Unicode字符串",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

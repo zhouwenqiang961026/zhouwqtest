@@ -1,0 +1,34 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_IsNull",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "IsNull",
+        "name": "空值处理",
+        "desc": "检查输入的参数是否为空值,不为空返回原值，为空返回默认值。\n参数1--被检查的值；\n参数2--为空时的缺省值；\n返回值为返回参数的数据类型。",
+        "example":"IsNull(arg,defaultVal)第一个参数不为空直接返回第一个参数,为空时返回默认值",
+        "entry": "com.toone.v3.platform.function.client.IsNull.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "range",
+            "typeRange":["char","text","number","boolean","date","longDate","integer"],
+            "desc": "",
+            "required": true
+        },
+        {
+            "type": "range",
+            "typeRange":["char","text","number","boolean","date","longDate","integer"],
+            "desc": "",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "range",
+            "typeRange":["char","text","number","boolean","date","longDate","integer"],
+            "desc": ""
+        }
+    }]
+}

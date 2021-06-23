@@ -1,0 +1,31 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_GetRowNum",
+    "version":"3.5.0",
+    "plugins": [{
+        "type": "function",
+        "code": "GetRowNum",
+        "name": "根据id获取实体对应记录的行号",
+        "desc": "根据id获取实体对应记录的行号。\n参数1--实体编码（字符串类型）； \n参数2--id 值（字符串类型）； \n返回值为整数类型。 ",
+        "example":"GetRowNum(\"entity1\",[entity1].[id])，返回指定id对应记录所在的行号（从1开始），记录不存在则返回-1。 ",
+        "entry": "com.toone.v3.platform.function.client.GetRowNum.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "integer",
+            "desc": ""
+        }
+    }]
+}

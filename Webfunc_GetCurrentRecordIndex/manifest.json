@@ -1,0 +1,26 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_GetCurrentRecordIndex",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "GetCurrentRecordIndex",
+        "name": "获取当前行索引",
+        "desc": "根据实体名称获取当前行，并返回索引值（目前为id字段值）。\n参数一：实体名称(字符串类型)。\n返回值类型：字符串类型。",
+        "example":"GetCurrentRecordIndex(\"EntityName\") 返回实体EntityName当前行id字段的值",
+        "entry": "com.toone.v3.platform.function.client.GetCurrentRecordIndex.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

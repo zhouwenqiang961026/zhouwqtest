@@ -1,0 +1,31 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_AvgColumn",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "AvgColumn",
+        "name": "求指定表格的字段平均值",
+        "desc": "计算指定实体的字段的平均值并返回。\n参数1--实体名称； 界面实体为字符串类型，其他变量实体需要加上变量的前缀\n参数2--字段名(字符串类型)； \n返回值类型：数字类型。",
+        "example":"AvgColumn(\"EntityName\",\"ColumnName\") 返回值为实体\"EntityName\"的\"ColumnName\"字段的字段平均值。 界面实体：AvgColumn(\"EntityName\",\"ColumnName\") 返回值为实体\"EntityName\"的\"ColumnName\"字段的字段平均值。 活动集实体：AvgColumn(\"BR_VAR_PARENT.entity\",\"ColumnName\") 返回值为实体\"BR_VAR_PARENT.entity\"的\"ColumnName\"字段的字段平均值。 ",
+        "entry": "com.toone.v3.platform.function.client.AvgColumn.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "实体编码",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "字段编码",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "number",
+            "desc": ""
+        }
+    }]
+}

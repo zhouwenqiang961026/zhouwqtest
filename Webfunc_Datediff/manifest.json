@@ -1,0 +1,36 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_Datediff",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "Datediff",
+        "name": "将两个日期相减后的时间段",
+        "desc": "返回两个日期之间的时间间隔；\n参数1--原日期(时间类型或满足时间格式的字符串类型)；\n参数2--目标日期(时间类型或满足时间格式的字符串类型)；\n参数3--差值的单位(字符串类型)，s-秒,m-分,H-时,d-日；\n注：时间间隔=目标日期-原日期\n返回值为数值类型。",
+        "example":" Datediff(\"2012-11-25 01:00:32\",\"2012-11-24 05:55:33\",\"d\")，返回值为 -0.795127",
+        "entry": "com.toone.v3.platform.function.client.Datediff.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "longDate",
+            "desc": "原日期",
+            "required": true
+        },
+        {
+            "type": "longDate",
+            "desc": "目标日期",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "差值的单位",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "number",
+            "desc": ""
+        }
+    }]
+}

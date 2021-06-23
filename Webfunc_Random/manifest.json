@@ -1,0 +1,36 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_Random",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "Random",
+        "name": "随机数",
+        "desc": "返回指定区间的随机数。\n参数1--随机区域的最小值(数字类型)； \n参数2--随机区域的最大值(数字类型)； \n参数3--返回值保留的小数位数(整数类型)； \n返回值类型：数字类型。 ",
+        "example":"代码示例：Random(1.5,2.5,3)返回值为1.508。 ",
+        "entry": "com.toone.v3.platform.function.client.Random.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "number",
+            "desc": "随机区域的最小值",
+            "required": true
+        },
+        {
+            "type": "number",
+            "desc": "随机区域的最大值",
+            "required": true
+        },
+        {
+            "type": "number",
+            "desc": "返回值保留的小数位数",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "number",
+            "desc": ""
+        }
+    }]
+}

@@ -1,0 +1,20 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_E",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "E",
+        "name": "e",
+        "desc": "返回自然对数的底数。\n无参数； \n返回值类型：数字类型。\n",
+        "example":"E() 返回值为2.718281828459045",
+        "entry": "com.toone.v3.platform.function.client.E.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [],
+        "output": {
+            "type": "number",
+            "desc": ""
+        }
+    }]
+}

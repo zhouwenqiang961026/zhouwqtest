@@ -1,0 +1,47 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_ListToString",
+    "version":"3.5.0",
+    "plugins": [{
+        "type": "function",
+        "code": "ListToString",
+        "name": "将列表拼成字符串",
+        "desc": "将实体某个字段拼接成一个字符串返回。\n参数1--实体名称（字符串类型）。 界面实体为字符串类型，其他变量实体需要加上变量的前缀；\n参数2--字段名称（字符串类型）； \n参数3--拼接时的分隔符（字符串类型）。可以省略,省略时默认使用分号作为分隔符； \n参数4--记录筛选条件。0：全部记录；1：选中记录；默认为0； \n参数5--函数增加是否过滤空值的选项（布尔类型）。默认true处理，如果参数=false，则不去掉空值记录；\n参数6--是否去重复（布尔类型）。默认为false，如果参数=true，则去除重复记录。\n返回值为字符串类型。",
+        "example":"ListToString(\"EntityName\",\"ColumnName\",\";\",0,true,false)返回值为拼接后的字符串。 界面实体：ListToString(\"EntityName\",\"ColumnName\",\";\",0,true,false)返回值为拼接后的字符串。 其他变量实体：ListToString(\"BR_VAR_PARENT.entity\",\"ColumnName\",\";\",0,true,false)",
+        "entry": "com.toone.v3.platform.function.client.ListToString.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": ""
+        },
+        {
+            "type": "number",
+            "desc": ""
+        },
+        {
+            "type": "boolean",
+            "desc": ""
+        },
+        {
+            "type": "boolean",
+            "desc": ""
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

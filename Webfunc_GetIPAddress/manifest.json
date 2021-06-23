@@ -1,0 +1,20 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_GetIPAddress",
+    "version":"3.6.0",
+    "plugins": [{
+        "type": "function",
+        "code": "GetIPAddress",
+        "name": "客户端的IP地址",
+        "desc": "返回当前客户端的IP地址(注意返回的是服务器端获取到的请求IP地址)。\n无参数； \n返回值为字符串。 ",
+        "example":"GetIPAddress()返回当前客户端的IP字符串； ",
+        "entry": "com.toone.v3.platform.function.client.GetIPAddress.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

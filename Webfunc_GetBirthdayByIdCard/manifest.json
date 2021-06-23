@@ -1,0 +1,26 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_GetBirthdayByIdCard",
+    "version":"3.5.0",
+    "plugins": [{
+        "type": "function",
+        "code": "GetBirthdayByIdCard",
+        "name": "根据身份证号获取生日日期",
+        "desc": "根据身份证号获取生日日期\n参数1：身份证号（字符串类型）； \n返回值类型：字符串类型。 ",
+        "example":"代码示例：GetBirthdayByIdCard(\"522635197809122343\")，返回值：1978-09-12",
+        "entry": "com.toone.v3.platform.function.client.GetBirthdayByIdCard.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

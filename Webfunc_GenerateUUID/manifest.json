@@ -1,0 +1,20 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_GenerateUUID",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "GenerateUUID",
+        "name": "生成uuid",
+        "desc": "生成一个uuid。\n无参数； \n返回值为字符串。 ",
+        "example":"GenerateUUID()返回一个uuid字符串",
+        "entry": "com.toone.v3.platform.function.client.GenerateUUID.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

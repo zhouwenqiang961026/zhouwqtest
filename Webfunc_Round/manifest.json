@@ -1,0 +1,31 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_Round",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "Round",
+        "name": "求浮点数的四舍五入值",
+        "desc": "将浮点数保留指定小数位进行四舍五入。\n参数1--要舍入的数（数字类型）； \n参数2--舍入的位数（非负整数类型，0表示四舍五入到整数部分）； \n返回值类型：数字类型。 ",
+        "example":"代码示例：Round(3.555,2)返回值为3.56。 ",
+        "entry": "com.toone.v3.platform.function.client.Round.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "number",
+            "desc": "要舍入的数",
+            "required": true
+        },
+        {
+            "type": "integer",
+            "desc": "舍入的位数",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "number",
+            "desc": ""
+        }
+    }]
+}

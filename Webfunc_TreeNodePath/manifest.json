@@ -1,0 +1,41 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_TreeNodePath",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "TreeNodePath",
+        "name": "获取界面上树选中节点的指定字段的路径",
+        "desc": "返回树选中节点的路径，如果选中多个节点时候只返回第一个选中节点的路径。\n参数1--树型实体名(字符串类型)；  \n参数2--字段名(字符串类型)； \n参数3--间隔；\n参数4--树结构配置项；\n返回值为字符串类型。",
+        "example":"TreeNodePath(\"Table1\",\"Table1.Column1\",\"\\\",\"type:1,pidField:PID,treeCodeField:InnerCode,orderField:orderNo,isLeafField:isLeaf\")返回值为根节点Column1字段的值\\第一级节点Column1字段的值\\第二级节点Column1字段的值\\…\\选中节点Column1字段的值。",
+        "entry": "com.toone.v3.platform.function.client.TreeNodePath.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "树型实体名",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "字段名",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "间隔符号",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "树结构配置项",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

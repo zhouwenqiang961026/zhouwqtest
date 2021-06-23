@@ -1,0 +1,40 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_Replace",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "Replace",
+        "name": "替代字符串内的内容",
+        "desc": "用指定的字符串替换原始字符串中的子串,返回替换后的结果。\n参数1--原字符串(字符串类型)； \n参数2--模式串(字符串类型)； \n参数3--替代串(字符串类型)；\n参数4--是否支持正则替换，True为正则替换，False为普通替换(布尔类型)，该参数不填时按普通替换处理；  \n返回值为字符串类型。",
+        "example":"Replace(\"abcabbaab\",\"ab\",\"123\",True)返回值为123c123ba123",
+        "entry": "com.toone.v3.platform.function.client.Replace.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "原字符串",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "模式串",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "替代串",
+            "required": true
+        },
+        {
+            "type": "boolean",
+            "desc": "是否支持正则替换"
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

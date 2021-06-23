@@ -1,0 +1,26 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_ChineseToUnicode",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "ChineseToUnicode",
+        "name": "中文转Unicode",
+        "desc": "将指定字符串转换成Unicode,返回Unicode字符串。\n参数1--字符串(字符串类型)\n返回值为字符串类型。",
+        "example":"ChineseToUnicode(\"同望unicode\")返回值为\"同望unicode\"",
+        "entry": "com.toone.v3.platform.function.client.ChineseToUnicode.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "需要转换字符串",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

@@ -1,0 +1,31 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_DateTimeToChinese",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "DateTimeToChinese",
+        "name": "日期转化为中文",
+        "desc": "将日期转化为中文。\n参数1--日期时间(必填，时间类型或满足时间格式的字符串类型)；\n参数2--转换格式(必填，字符串类型)；\n格式说明：月(M)、日(d)、12时(h)、24时(H)、分(m)、秒(s)、周(E)、季度(q)，周(E)用1-3个占位符,季（q）用1个占位符；\n必须与参数1给定的字符串格式和单位的个数对应，周和季度部分可以多选填。\n返回值为字符串类型。",
+        "example":"DateTimeToChinese(\"2017.12.22 12:23:02:23\",\"yyyy.MM.dd hh:mm:ss:SS EEE q\")，返回值为：二〇一七年十二月二十二日十二时二十三分二秒二十三毫秒 星期五四季",
+        "entry": "com.toone.v3.platform.function.client.DateTimeToChinese.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "longDate",
+            "desc": "日期时间",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "转换格式",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

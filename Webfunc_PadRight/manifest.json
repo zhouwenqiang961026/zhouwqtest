@@ -1,0 +1,36 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_PadRight",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "PadRight",
+        "name": "右侧填充",
+        "desc": "检查指定字符串长度是否达到指定长度,未达到则用指定字符在末尾填充,返回填充好的字符串。 \n参数1--原字符串(字符串类型)；\n参数2--指定的长度(整型)；\n参数3--填充字符串(字符串类型，长度只能为1)； \n返回值为字符串类型。",
+        "example":"PadRight(\"abc\",5,\"1\")，返回值为\"abc11\"。",
+        "entry": "com.toone.v3.platform.function.client.PadRight.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        },
+        {
+            "type": "integer",
+            "desc": "",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

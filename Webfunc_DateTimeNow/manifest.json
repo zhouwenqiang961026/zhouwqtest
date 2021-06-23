@@ -1,0 +1,20 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_DateTimeNow",
+    "version":"3.5.0",
+    "plugins": [{
+        "type": "function",
+        "code": "DateTimeNow",
+        "name": "时间日期",
+        "desc": "返回服务器当前的日期和时间，格式为yyyy-MM-dd HH:mm:ss\n无参数； \n返回值为字符串类型。",
+        "example":"DateTimeNow()返回值为\"2011-10-19 12:03:44\"",
+        "entry": "com.toone.v3.platform.function.client.DateTimeNow.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [],
+        "output": {
+            "type": "longDate",
+            "desc": ""
+        }
+    }]
+}

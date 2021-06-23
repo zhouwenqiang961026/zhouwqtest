@@ -1,0 +1,27 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_PrintToBrowserConsole",
+    "version":"3.3.0",
+    "plugins": [{
+        "type": "function",
+        "code": "PrintToBrowserConsole",
+        "name": "在浏览器控制台输出文字内容",
+        "desc": "在浏览器控制台输出文字内容，支持类型：log,debug,info,warn,error,clear等。\n参数1：字符串(必填，字符串类型)；\n参数2：字符串(非必填，字符串类型，缺省值log)；\n返回值类型：无返回值。",
+        "example":"PrintToBrowserConsole(\"在控制台打印log信息\",\"log\");PrintToBrowserConsole(\"在控制台打印info信息\",\"info\");PrintToBrowserConsole(\"在控制台打印debug信息\",\"debug\");PrintToBrowserConsole(\"在控制台打印warn信息\",\"warn\");PrintToBrowserConsole(\"在控制台打印error信息\",\"error\");PrintToBrowserConsole(\"清空控制台\",\"clear\")",
+        "entry": "com.toone.v3.platform.function.client.PrintToBrowserConsole.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": ""
+        }
+        ],
+        "output": null
+    }]
+}

@@ -1,0 +1,20 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_GetloginUserNum",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "GetloginUserNum",
+        "name": "当前的在线用户数",
+        "desc": "返回当前的在线用户数(实时获取)。\n无参数； \n返回值为整型。",
+        "example":"GetloginUserNum()返回当前的在线用户数(实时获取)。 ",
+        "entry": "com.toone.v3.platform.function.client.GetloginUserNum.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [],
+        "output": {
+            "type": "integer",
+            "desc": ""
+        }
+    }]
+}

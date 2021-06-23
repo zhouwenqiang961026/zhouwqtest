@@ -1,0 +1,20 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_GetHost",
+    "version":"3.6.0",
+    "plugins": [{
+        "type": "function",
+        "code": "GetHost",
+        "name": "获取当前域名",
+        "desc": "获取当前域名。\n返回值为字符串类型。 ",
+        "example":"GetHost() 返回值为\"www.baidu.com\"",
+        "entry": "com.toone.v3.platform.function.client.GetHost.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

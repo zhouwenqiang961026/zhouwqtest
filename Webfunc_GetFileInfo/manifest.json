@@ -1,0 +1,31 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_GetFileInfo",
+    "version":"3.6.0",
+    "plugins": [{
+        "type": "function",
+        "code": "GetFileInfo",
+        "name": "获取文件信息",
+        "desc": "根据文件id获取文件信息。\n参数1--文件标识(字符串类型)；\n参数2--文件信息类型（字符串类型），其中fileName为文件名，fileSize为文件大小（单位KB），fileType为文件类型扩展名，md5为文件md5码；\n返回值为字符串类型。",
+        "example":"GetFileInfo(\"8a819ab551c2421c0151c3b597b80ddf\",\"fileName\")",
+        "entry": "com.toone.v3.platform.function.client.GetFileInfo.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

@@ -1,0 +1,30 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_Format",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "Format",
+        "name": "拼接格式",
+        "desc": "在格式串内拼接指定字符串,返回结果串。\n参数1--模式串(字符串类型)；  \n参数2--拼接串(各种类型)； \n参数n--拼接串(各种类型)； \n返回值为字符串。",
+        "example":"Format(\"ab{0}cd{1}\",\"12\",\"3\") 返回值为\"ab12cd3\"",
+        "entry": "com.toone.v3.platform.function.client.Format.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [{
+            "index":"[0,2)",
+            "type": "text",
+            "desc": "模式串",
+            "required": true
+        },{
+            "index":"[2,+∞)",
+            "type": "range",
+            "desc": "拼接串",
+            "typeRange":["char","text","number","boolean","date","longDate","integer"]
+        }],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

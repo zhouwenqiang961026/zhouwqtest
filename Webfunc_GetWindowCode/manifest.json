@@ -1,0 +1,20 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_GetWindowCode",
+    "version":"3.3.0",
+    "plugins": [{
+        "type": "function",
+        "code": "GetWindowCode",
+        "name": "获取当前窗体编码",
+        "desc": "获取当前窗体编码\n无参数； \n返回值为字符串类型。",
+        "example":"GetWindowCode()，返回当前窗体编码。",
+        "entry": "com.toone.v3.platform.function.client.GetWindowCode.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

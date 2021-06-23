@@ -1,0 +1,26 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_DateTimeToUnixtimestamp",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "DateTimeToUnixtimestamp",
+        "name": "根据日期时间转成时间戳",
+        "desc": "根据日期时间转成时间戳。\n参数1--日期时间值(字符串类型),必填\n返回值为字符串类型",
+        "example":"DateTimeToUnixtimestamp(\"2018-08-28 16:14:13\"),返回值为:1535444053",
+        "entry": "com.toone.v3.platform.function.client.DateTimeToUnixtimestamp.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "longDate",
+            "desc": "日期时间值",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

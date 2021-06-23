@@ -1,0 +1,28 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_SetRowNum",
+    "version":"3.5.0",
+    "plugins": [{
+        "type": "function",
+        "code": "SetRowNum",
+        "name": "为字段设置实体记录的行号",
+        "desc": "为字段设置实体记录的行号。\n参数1--实体编码（字符串类型）； \n参数2--字段编码（字符串类型）； \n无返回值。",
+        "example":"SetRowNum(\"entity1\",\"rowNum\")，为实体字段依次设置实体记录的行号（从1开始）",
+        "entry": "com.toone.v3.platform.function.client.SetRowNum.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "实体编码",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "字段编码",
+            "required": true
+        }
+        ],
+        "output": null
+    }]
+}

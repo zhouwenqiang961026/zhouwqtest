@@ -1,0 +1,29 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_Divide",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "Divide",
+        "name": "除法",
+        "desc": "1. 对数值做除法运算；\n2. 如果除数为0，则返回NaN；\n3. 参数可以为任意大或任意小的数值；\n4. 最终的输出结果的最大长度为16有效数字；\n5. 如果输出结果的整数位数等于或超过16位，则不会显示小数；\n6. 如果除数或被除参数超过16位，则不保证计算结果的正确性；\n参数1--被除数(数字类型)；\n参数2--除数(数字类型)；\n参数N--除数(数字类型)；\n返回值为数字类型。",
+        "example":"Divide(arg1,arg2,...,argN) 返回值为数字类型",
+        "entry": "com.toone.v3.platform.function.client.Divide.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [{
+            "index":"[0,2)",
+            "type": "number",
+            "desc": "除数",
+            "required": true
+        },{
+            "index":"[2,+∞)",
+            "type": "number",
+            "desc": "除数"
+        }],
+        "output": {
+            "type": "number",
+            "desc": ""
+        }
+    }]
+}

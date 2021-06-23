@@ -1,0 +1,40 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_ReplaceByIndex",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "ReplaceByIndex",
+        "name": "字符串替换",
+        "desc": "按位置替换字符串。替换位于指定位置范围的字符串。索引超出指定范围的不变,beginIndex &lt; endIndex并且为有效范围才替换。\n参数1:原始字符串（必填）；\n参数2:替换字符串（必填）；\n参数3:替换开始下标（包含,从0开始，必填不能忽略）；\n参数4:替换结束下标（不包含,从0开始,可以忽略，忽略时表示替换到结尾）；\n返回值为字符串类型。",
+        "example":" ReplaceByIndex(\"abcdefg\",\"12345\",0,3)，返回:\"12345defg\"",
+        "entry": "com.toone.v3.platform.function.client.ReplaceByIndex.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "原始字符串",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "替换字符串",
+            "required": true
+        },
+        {
+            "type": "integer",
+            "desc": "替换开始下标",
+            "required": true
+        },
+        {
+            "type": "integer",
+            "desc": "替换结束下标"
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

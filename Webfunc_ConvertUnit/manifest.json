@@ -1,0 +1,35 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_ConvertUnit",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "ConvertUnit",
+        "name": "单位转换，根据当前值和当前单位，转换成对应单位的数值。",
+        "desc": "根据当前值和当前单位，转换成对应单位的数值。如不指定目标单位，目标单位由系统匹配最合适的单位。\n参数一：当前数值(数字类型)；\n参数二：当前单位(字符串类型)；\n参数三：目标单位，该参数可省略(字符串类型)；\n返回值类型：字符串类型。 \n注：\n1、当前只支持存储容量单位的转换。\n2、目前支持的存储容量单位：b,B,KB,MB,GB,TB,PB,EB,ZB,YB,BB,NB,DB,CB。\n3、最合适的单位是指：系统会将当前值转换到[0.1,500]范围内，所得到的单位就是最合适的单位。\n4、若当前单位是最小时，且当前值小于0.1，系统不会进行转换。\n5、若当前单位时最大时，且当前值大于500，系统不会进行转换。",
+        "example":"ConvertUnit(1024,\"M\") 返回值:\"1GB\"；ConvertUnit(1048576,\"CB\") 返回值:\"1048576CB\"",
+        "entry": "com.toone.v3.platform.function.client.ConvertUnit.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "number",
+            "desc": "需要转换的数值",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "当前数值的单位",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "目标数值的单位"
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

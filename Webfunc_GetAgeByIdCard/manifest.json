@@ -1,0 +1,26 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_GetAgeByIdCard",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "GetAgeByIdCard",
+        "name": "根据身份证号码获取年龄",
+        "desc": "根据身份证号码获取年龄。\n参数1--身份证号码(字符串类型)；\n返回值为数字类型。\n注：1、当前日期是获取服务器的时间\n    2、年龄是精确到日来计算的。",
+        "example":"GetAgeByIdCard(\"身份证号码\")，返回年龄",
+        "entry": "com.toone.v3.platform.function.client.GetAgeByIdCard.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "number",
+            "desc": ""
+        }
+    }]
+}

@@ -1,0 +1,34 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_StandardMD5Encrypt",
+    "version":"3.3.0",
+    "plugins": [{
+        "type": "function",
+        "code": "StandardMD5Encrypt",
+        "name": "标准MD5加密",
+        "desc": "对字符串进行标准MD5加密。\n参数1--需要加密的字符串(必填，字符串类型)； \n参数2--加密的位数(选填，字符串类型，有16位和32位两种类型，默认为32)； \n参数3--输出的大小写(选填，字符串类型，有\"big\"和\"small\"两种类型，默认为big)； \n返回值为字符串类型。",
+        "example":"代码示例：StandardMD5Encrypt(\"123456\",\"16\",\"big\") 返回值为：\"49BA59ABBE56E057\"",
+        "entry": "com.toone.v3.platform.function.client.StandardMD5Encrypt.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "需要加密的字符串",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "加密的位数"
+        },
+        {
+            "type": "text",
+            "desc": "输出的大小写"
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

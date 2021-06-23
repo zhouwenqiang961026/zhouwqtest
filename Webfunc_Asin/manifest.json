@@ -1,0 +1,26 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_Asin",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "Asin",
+        "name": "反正弦",
+        "desc": "反正弦，返回正弦值为指定值的角度。 \n参数1--指定的角度(数值类型),取值范围:[-1,1]； \n返回值为小数。",
+        "example":"Asin(1)返回值为90",
+        "entry": "com.toone.v3.platform.function.client.Asin.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "number",
+            "desc": "角度",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "number",
+            "desc": ""
+        }
+    }]
+}

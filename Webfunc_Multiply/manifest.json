@@ -1,0 +1,29 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_Multiply",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "Multiply",
+        "name": "乘法",
+        "desc": "1. 对数值做乘法运算；\n2. 参数可以为任意大或任意小的数值；\n3. 最终的输出结果的最大长度为16有效数字；\n4. 如果输出结果的整数位数等于或超过16位，则不会显示小数；\n5. 如果乘数或被乘参数超过16位，则不保证计算结果的正确性；\n参数1--被乘数(数字类型)；\n参数2--乘数(数字类型)；\n参数N--乘数(数字类型)；\n返回值为数字类型。  \n\n    ",
+        "example":"Multiply(arg1,arg2,...,argN) 返回值为数字类型",
+        "entry": "com.toone.v3.platform.function.client.Multiply.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [{
+            "index":"[0,2)",
+            "type": "number",
+            "desc": "被乘数",
+            "required": true
+        },{
+            "index":"[2,+∞)",
+            "type": "number",
+            "desc": "乘数"
+        }],
+        "output": {
+            "type": "number",
+            "desc": ""
+        }
+    }]
+}

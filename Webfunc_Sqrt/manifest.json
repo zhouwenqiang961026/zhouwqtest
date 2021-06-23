@@ -1,0 +1,26 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_Sqrt",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "Sqrt",
+        "name": "数字的平方根",
+        "desc": "返回指定数字的平方根。\n参数1--指定的数字(数值类型)； \n返回值为数值类型。 ",
+        "example":"Sqrt(4)返回值为2。 ",
+        "entry": "com.toone.v3.platform.function.client.Sqrt.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "number",
+            "desc": "指定的数字",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "number",
+            "desc": ""
+        }
+    }]
+}

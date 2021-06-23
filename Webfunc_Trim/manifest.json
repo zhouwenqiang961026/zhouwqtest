@@ -1,0 +1,30 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_Trim",
+    "version":"3.3.0",
+    "plugins": [{
+        "type": "function",
+        "code": "Trim",
+        "name": "移除字符串头尾空格或移除字符串中所有空格",
+        "desc": "移除字符串头尾空格或移除字符串中所有空格，返回移除后的字符串。\n参数1--原字符串(字符串类型)；\n参数2--是否去除所有空格(布尔类型，默认为false:只去除头尾空格，true：去除所有空格)；\n返回值为字符串类型。",
+        "example":"Trim(\"  abc  de \")，返回值为：abc  de；Trim(\"  abc  de \",true)，返回值为：abcde",
+        "entry": "com.toone.v3.platform.function.client.Trim.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "原字符串",
+            "required": true
+        },
+        {
+            "type": "boolean",
+            "desc": ""
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

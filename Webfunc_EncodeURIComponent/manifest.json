@@ -1,0 +1,26 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_EncodeURIComponent",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "EncodeURIComponent",
+        "name": "将字符串作为URI组件进行编码",
+        "desc": "将字符串作为URI组件进行编码。\n参数1--需要编码的字符串。\n返回值为字符串类型。",
+        "example":"EncodeURIComponent(\"www.baidu.com/s?wd=同望科技\")返回值为经过js原生方法编码的字符串",
+        "entry": "com.toone.v3.platform.function.client.EncodeURIComponent.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "需要编码的字符串",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

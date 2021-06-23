@@ -1,0 +1,26 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_Log10",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "Log10",
+        "name": "求10的底",
+        "desc": "返回指定数字以 10 为底的对数。\n参数1--指定数字(小数类型)； \n返回值为小数。 ",
+        "example":"Log10(100) 返回值为2。 ",
+        "entry": "com.toone.v3.platform.function.client.Log10.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "number",
+            "desc": "",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "number",
+            "desc": ""
+        }
+    }]
+}

@@ -1,0 +1,26 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_Truncate",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "Truncate",
+        "name": "求浮点数的整数部分",
+        "desc": "取指定数值的整数部分。\n参数1--指定的数（数字类型）； \n返回值类型：整数类型。 ",
+        "example":"代码示例：Truncate(1.99)返回值为1。 ",
+        "entry": "com.toone.v3.platform.function.client.Truncate.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "number",
+            "desc": "指定的数",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "integer",
+            "desc": ""
+        }
+    }]
+}

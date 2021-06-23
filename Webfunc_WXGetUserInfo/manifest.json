@@ -1,0 +1,20 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_WXGetUserInfo",
+    "version":"3.5.0",
+    "plugins": [{
+        "type": "function",
+        "code": "WXGetUserInfo",
+        "name": "获取微信用户信息",
+        "desc": "返回员工rtx帐号名称（拼音）。\n无参数； \n返回值为字符串类型。",
+        "example":"WXGetUserInfo()返回员工rtx帐号名称（拼音）。 ",
+        "entry": "com.toone.v3.platform.function.client.WXGetUserInfo.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

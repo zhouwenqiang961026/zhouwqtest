@@ -1,0 +1,26 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_CheckChinese",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "CheckChinese",
+        "name": "中文检查",
+        "desc": "检查指定字符串是否包含中文字符;\n参数1--待检查字符串(字符串类型)； \n返回值为布尔类型",
+        "example":"CheckChinese(\"a你好bc\") 返回值为True",
+        "entry": "com.toone.v3.platform.function.client.CheckChinese.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "需要检查的字符串",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "boolean",
+            "desc": ""
+        }
+    }]
+}

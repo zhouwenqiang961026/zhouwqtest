@@ -1,0 +1,31 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_GetDateSection",
+    "version":"3.6.0",
+    "plugins": [{
+        "type": "function",
+        "code": "GetDateSection",
+        "name": "获取日期的某一部分",
+        "desc": "获取日期的某一部分返回。\n参数1--给定的日期，格式yyyy-MM-dd或者yyyy-MM-dd HH:mm:ss(时间类型或满足时间格式的字符串类型)；\n参数2--指定要返回的日期部分：0:全部，1:年，2：月，3：日，4：小时，6：分，7：秒；9：星期(整型)；\n返回值为字符串。",
+        "example":"GetDateSection(\"2012-09-20\",2)",
+        "entry": "com.toone.v3.platform.function.client.GetDateSection.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "longDate",
+            "desc": "",
+            "required": true
+        },
+        {
+            "type": "number",
+            "desc": "",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

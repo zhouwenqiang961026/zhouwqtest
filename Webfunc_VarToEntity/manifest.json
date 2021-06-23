@@ -1,0 +1,26 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_VarToEntity",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "VarToEntity",
+        "name": "字符串反序列化成实体",
+        "desc": "将一个或者多个实体的json字符串反序列化成一个或者多个实体。\n参数1--字符串。 \n返回值为实体类型。",
+        "example":"VarToEntity(str)将str字符串反序列化成实体。",
+        "entry": "com.toone.v3.platform.function.client.VarToEntity.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "字符串",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "entity",
+            "desc": ""
+        }
+    }]
+}

@@ -1,0 +1,26 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_MobileCall",
+    "version":"3.6.0",
+    "plugins": [{
+        "type": "function",
+        "code": "MobileCall",
+        "name": "打电话",
+        "desc": "通过此函数可以拨打电话。\n参数1--拨打的电话号码（字符串类型）； \n无返回值。 ",
+        "example":"MobileCall(\"110\")拨打110",
+        "entry": "com.toone.v3.platform.function.client.MobileCall.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "void",
+            "desc": ""
+        }
+    }]
+}

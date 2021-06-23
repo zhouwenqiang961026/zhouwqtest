@@ -1,0 +1,44 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_EntityRecordMultiselect",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "EntityRecordMultiselect",
+        "name": "选中或取消选中某个实体的多条记录",
+        "desc": "根据给定的数据，查找界面实体指定字段里的数据，选中或取消选中匹配的记录\n参数1：实体编码（字符串类型）； \n参数2：字段的值，多个值需用分隔符隔开，分隔符在参数四指定（字符串类型）； \n参数3：字段编码，作筛选条件用（字符串类型）； \n参数4：分隔符，仅匹配单个数据时可设置为\"\"或忽略该参数（字符串类型）； \n参数5：操作类型，select：选中匹配的记录，unselect：取消选中匹配的记录，该参数忽略时，默认值为select（字符串类型）；\n返回值类型：无返回值。",
+        "example":"EntityRecordMultiselect(\"Entity\",\"fieldValue1,fileValue2\",\"fileCode\",\",\",\"select\")",
+        "entry": "com.toone.v3.platform.function.client.EntityRecordMultiselect.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "实体编码",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "字段的值",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "字段编码",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "分隔符"
+        },
+        {
+            "type": "text",
+            "desc": "操作类型"
+        }
+        ],
+        "output": {
+            "type": "any",
+            "desc": ""
+        }
+    }]
+}

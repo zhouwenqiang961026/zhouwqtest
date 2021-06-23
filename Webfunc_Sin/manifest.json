@@ -1,0 +1,26 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_Sin",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "Sin",
+        "name": "正弦",
+        "desc": "返回角度的正弦值。\n参数1--指定的角度(小数类型)； \n返回值为小数。 ",
+        "example":"Sin(1)返回值为0.01745240643728351。 ",
+        "entry": "com.toone.v3.platform.function.client.Sin.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "number",
+            "desc": "指定的角度",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "number",
+            "desc": ""
+        }
+    }]
+}

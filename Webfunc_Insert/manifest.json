@@ -1,0 +1,36 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_Insert",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "Insert",
+        "name": "插入指定字符串",
+        "desc": "在指定字符串的指定位置插入另外一指定的模式串,返回插入指定串后的结果字符串。\n参数1--原字符串(字符串类型)；\n参数2--插入指定字符串的位置(整数类型，0基准)； \n参数3--指定插入的字符串(字符串类型)； \n返回值为字符串类型。",
+        "example":"Insert(\"abc\",1,\"oo\")，返回值为\"aoobc\"。",
+        "entry": "com.toone.v3.platform.function.client.Insert.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        },
+        {
+            "type": "integer",
+            "desc": "",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

@@ -1,0 +1,31 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_GetLocalStorage",
+    "version":"3.2.0",
+    "plugins": [{
+        "type": "function",
+        "code": "GetLocalStorage",
+        "name": "从本地储存中获取数据",
+        "desc": "从本地储存中获取数据。\n参数1--数据名称（字符串类型）； \n参数2--取数据为空使用默认值（字符串类型）； \n返回值为字符串类型。",
+        "example":"GetLocalStorage(\"Name\",\"default\")返回值为本地存储的内容",
+        "entry": "com.toone.v3.platform.function.client.GetLocalStorage.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

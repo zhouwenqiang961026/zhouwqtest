@@ -1,0 +1,31 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_GetCookie",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "GetCookie",
+        "name": "获取cookie值",
+        "desc": "从客户端获取cookie值。\n参数1--cookie名称（字符串类型）； \n参数2--取cookie为空使用默认值（字符串类型）； \n返回值为字符串类型。",
+        "example":"GetCookie(\"cookieName\",\"default\")返回值为Cookie的内容",
+        "entry": "com.toone.v3.platform.function.client.GetCookie.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

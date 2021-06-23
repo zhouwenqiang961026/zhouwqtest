@@ -1,0 +1,36 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_PadLeft",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "PadLeft",
+        "name": "左侧填充",
+        "desc": "左填充字符串，使其达到指定长度。返回填充后的字符串。\n参数1--原字符串(字符串类型)；\n参数2--指定的长度(整数类型)；\n参数3--填充字符串(字符串类型且长度只能为1)； \n返回值为字符串类型。",
+        "example":"PadLeft(\"abc\",5,\"1\") 返回值为\"11abc\"。",
+        "entry": "com.toone.v3.platform.function.client.PadLeft.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        },
+        {
+            "type": "integer",
+            "desc": "",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

@@ -1,0 +1,31 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_SetLocalStorage",
+    "version":"3.2.0",
+    "plugins": [{
+        "type": "function",
+        "code": "SetLocalStorage",
+        "name": "本地储存数据",
+        "desc": "本地储存数据。\n参数1--数据名称（字符串类型）；\n参数2--数据的值（字符串类型）； \n返回值为布尔类型。 ",
+        "example":"SetLocalStorage(\"Name\",\"Value\") 操作成功返回True。",
+        "entry": "com.toone.v3.platform.function.client.SetLocalStorage.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "text",
+            "desc": "数据名称",
+            "required": true
+        },
+        {
+            "type": "text",
+            "desc": "数据的值",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "boolean",
+            "desc": ""
+        }
+    }]
+}

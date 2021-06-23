@@ -1,0 +1,26 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_Tanh",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "Tanh",
+        "name": "双曲正切值",
+        "desc": "返回指定角度的双曲正切值。\n参数1--指定的角度(小数类型)； \n返回值为小数。 ",
+        "example":"Tanh(1)返回值为0.7615941559557649。 ",
+        "entry": "com.toone.v3.platform.function.client.Tanh.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "number",
+            "desc": "指定的角度",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "number",
+            "desc": ""
+        }
+    }]
+}

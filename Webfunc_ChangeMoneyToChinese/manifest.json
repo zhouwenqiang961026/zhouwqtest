@@ -1,0 +1,26 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_ChangeMoneyToChinese",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "ChangeMoneyToChinese",
+        "name": "将人民币金额转成中文大写",
+        "desc": "将人民币金额转成中文大写。\n参数1：要转换的金额； \n返回值为字符串类型。",
+        "example":"ChangeMoneyToChinese(998.1314)，返回值是为：\"玖佰玖拾捌元壹角叁分壹厘肆毫\"",
+        "entry": "com.toone.v3.platform.function.client.ChangeMoneyToChinese.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "number",
+            "desc": "需要转换的金额",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}

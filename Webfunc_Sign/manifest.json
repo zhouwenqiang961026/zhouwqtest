@@ -1,0 +1,26 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_Sign",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "Sign",
+        "name": "求正负值",
+        "desc": "返回表示浮点数字的符号的值。\n参数1--要取符号的数(小数类型)； \n返回值为整数0，1或者-1。 ",
+        "example":"Sign(-99)返回值为-1。 ",
+        "entry": "com.toone.v3.platform.function.client.Sign.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "number",
+            "desc": "要取符号的数",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "integer",
+            "desc": ""
+        }
+    }]
+}

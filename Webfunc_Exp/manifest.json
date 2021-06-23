@@ -1,0 +1,26 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_Exp",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "Exp",
+        "name": "e的指定次幂",
+        "desc": "返回e的指定次幂\n参数1--幂（数字类型）； \n返回值类型：数字类型。",
+        "example":"Exp(2)返回值为7.38905609893065",
+        "entry": "com.toone.v3.platform.function.client.Exp.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [
+        {
+            "type": "number",
+            "desc": "幂",
+            "required": true
+        }
+        ],
+        "output": {
+            "type": "number",
+            "desc": ""
+        }
+    }]
+}

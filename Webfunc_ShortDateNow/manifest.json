@@ -1,0 +1,20 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_ShortDateNow",
+    "version":"3.5.0",
+    "plugins": [{
+        "type": "function",
+        "code": "ShortDateNow",
+        "name": "短日期",
+        "desc": "返回服务器当前时间的短时间格式，格式为yyyy-MM-dd。\n无参数； \n返回值为字符串类型。",
+        "example":"ShortDateNow()，返回值为\"2015-11-03\"。 ",
+        "entry": "com.toone.v3.platform.function.client.ShortDateNow.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [],
+        "output": {
+            "type": "text",
+            "desc": ""
+        }
+    }]
+}
