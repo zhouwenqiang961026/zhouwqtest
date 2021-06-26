@@ -3,7 +3,7 @@
  * 格式yyyy-MM-dd或者yyyy-MM-dd HH:mm:ss field int 指定要返回的日期部分：
  * 0:全部， 1:年，2：月，3：日，4：小时，6：分，7：秒；9：星期；
  */
-vds.import("vds.object.*", "vds.date.*");
+vds.import("vds.object.*", "vds.date.*","vds.exception.*");
 var main = function (dateStr,field) {
     if(field != null){
         field += "";
@@ -28,16 +28,16 @@ var main = function (dateStr,field) {
         6: "星期六"
     };
     if (vds.object.isUndefOrNull(dateStr))
-        throw new Error("给定的日期为空，请检查");
+        throw vds.exception.newConfigException("给定的日期为空，请检查");
     if (vds.object.isUndefOrNull(field))
-        throw new Error("指定要返回的日期部分为空，请检查");
+        throw vds.exception.newConfigException("指定要返回的日期部分为空，请检查");
 
     var dateReg = /^(\d{1,4})-(\d{1,2})-(\d{1,2})$/,
         longDateReg = /^(\d{1,4})-(\d{1,2})-(\d{1,2}) (\d{1,2}):(\d{1,2}):(\d{1,2})$/;
     if (dateStr.match(longDateReg) == null && dateStr.match(dateReg) == null)
-        throw new Error("给定的日期格式必须符合yyyy-MM-dd或yyyy-MM-dd HH:mm:ss");
+        throw vds.exception.newConfigException("给定的日期格式必须符合yyyy-MM-dd或yyyy-MM-dd HH:mm:ss");
     if (vds.object.isUndefOrNull(dateSection[field]))
-        throw new Error("指定要返回的日期部分不在备选范围内，请检查");
+        throw vds.exception.newConfigException("指定要返回的日期部分不在备选范围内，请检查");
 
     var dateObj = vds.date.valueOf(dateStr),
         weekOfDayVal = dateObj.getDay(), //获取星期几（ 0 - 6 ）
