@@ -1,8 +1,7 @@
 /**
- *
- *
+ * 字符串数据转成实体记录
  */
-vds.import("vds.exception.*", "vds.ds.*", "vds.log.*");
+vds.import("vds.exception.*", "vds.ds.*", "vds.log.*","vds.expression.*");
 var main = function (sourceValue, entityCode, fieldCode, separate) {
     //获取参数示例：
     if(undefined == sourceValue || null == sourceValue || sourceValue == ""){
@@ -17,7 +16,7 @@ var main = function (sourceValue, entityCode, fieldCode, separate) {
         if(entityCode.indexOf(".")==-1&&entityCode.indexOf("@")==-1){
             datasource = vds.ds.lookup(entityCode);
         }else{
-            vds.expression.execute(entityCode)
+            datasource = vds.expression.execute(entityCode)
         }
     }
     if(!datasource) {
