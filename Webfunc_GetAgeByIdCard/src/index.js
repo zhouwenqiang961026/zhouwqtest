@@ -17,7 +17,7 @@ var main = function (idcard) {
 }
 
 function getNowDate(){
-    var date = vds.date.format(vds.rpc.getDate(),"yyyy-MM-dd HH:mm:ss");
+    var date = vds.date.format(vds.rpc.getDate(),"yyyy-MM-dd");
     return date;
 }
 /**

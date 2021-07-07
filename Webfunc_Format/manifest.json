@@ -12,9 +12,15 @@
         "defineUrl": "./dist/index.js",
         "debugUrl":"./test/index.js",
         "inputs": [{
-            "index":"[0,2)",
+            "index":"[0,1)",
             "type": "text",
             "desc": "模式串",
+            "required": true
+        },{
+            "index":"[1,2)",
+            "type": "range",
+            "desc": "拼接串",
+            "typeRange":["char","text","number","boolean","date","longDate","integer"],
             "required": true
         },{
             "index":"[2,+∞)",
