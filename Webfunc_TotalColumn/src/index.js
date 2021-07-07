@@ -30,7 +30,7 @@ var main = function(dsName, columnName) {
             var record = records[i];
             var temValue = record.get(columnName) * 1;
             //var reg = /^(-?)[0-9]+(.[0-9]*)?$/;
-            if (!vds.string.isEmpty(temValue) && vds.object.isNumber(temValue)) {
+            if (!vds.string.isEmpty(temValue) && vds.object.isNumber(temValue) && !isNaN(temValue)) {
                 // 处理js浮点问题
                 resultValue = calculatorSum(resultValue, temValue);
             } else {
