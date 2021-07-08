@@ -9,7 +9,8 @@ vds.import("vds.object.*", "vds.number.*");
 var main = function(arg1, arg2) {
     if (vds.object.isUndefOrNull(arg1) || vds.object.isUndefOrNull(arg2))
         throw new Error("求浮点数的值函数参数为空，请检查");
-    if (!vds.object.isNumber(arg1) || !vds.object.isNumber(arg2))
+    var result = (new Number(arg1)).toString();
+    if (result.toUpperCase() == "NAN" || !vds.object.isNumber(arg2))
         throw new Error("求浮点数的值函数参数不是数字，请检查");
 
     return vds.number.toFixed(arg1, arg2);
