@@ -1,0 +1,20 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_DeleteFileByFileId",
+    "version":"3.4.0",
+    "plugins": [{
+        "type": "function",
+        "code": "DeleteFileByFileId",
+        "name": "根据文件标识删除文件",
+        "desc": "根据文件标识删除文件。\n参数1--文件标识（字符串类型）；返回值类型：无返回值。 ",
+        "example":":DeleteFileByFileId(\"5437f8796840b8365df518e8b56da388\") ，删除标识id对应的文件。",
+        "entry": "com.toone.v3.platform.function.client.DeleteFileByFileId.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [{
+            "type": "text",
+            "desc": "要删除的文件标识",
+            "required": true
+        }]
+    }]
+}

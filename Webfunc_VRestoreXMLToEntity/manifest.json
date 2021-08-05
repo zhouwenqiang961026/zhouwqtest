@@ -1,0 +1,20 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_VRestoreXMLToEntity",
+    "version":"3.5.0",
+    "plugins": [{
+        "type": "function",
+        "code": "VRestoreXMLToEntity",
+        "name": "XML数据还原为前台实体数据函数",
+        "desc": "XML数据还原为前台实体数据函数。\n参数1：由VConvertEntityToXML函数生成的XML信息。\n返回值类型：实体类型。",
+        "example":"VRestoreXMLToEntity(\"xml内容\")",
+        "entry": "com.toone.v3.platform.function.client.VRestoreXMLToEntity.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": [{
+            "type": "text",
+            "desc": "要删除的文件标识",
+            "required": true
+        }]
+    }]
+}

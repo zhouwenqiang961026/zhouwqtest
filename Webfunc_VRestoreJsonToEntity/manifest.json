@@ -1,0 +1,16 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_VRestoreJsonToEntity",
+    "version":"3.5.0",
+    "plugins": [{
+        "type": "function",
+        "code": "VRestoreJsonToEntity",
+        "name": "根据文件标识删除文件",
+        "desc": "二维数组json还原为前台实体函数。\n参数1：由VConvertEntityToJson函数生成的二维数组json信息。\n参数2：还原数据的目标实体名称。\n返回值类型：实体类型。",
+        "example":"VRestoreJsonToEntity(\"json内容\",\"实体名称\")",
+        "entry": "com.toone.v3.platform.function.client.VRestoreJsonToEntity.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": []
+    }]
+}
