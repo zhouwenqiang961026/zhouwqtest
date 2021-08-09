@@ -1,0 +1,16 @@
+{
+    "groupId": "com.toone.v3.platform",
+    "code": "Webfunc_VConvertKeyValueEntityToJson",
+    "version":"3.5.0",
+    "plugins": [{
+        "type": "function",
+        "code": "VConvertKeyValueEntityToJson",
+        "name": "将实体数据转换成key-value形式的json函数",
+        "desc": "参数1：实体名称\n参数2：作为key的字段名\n参数3：作为value的字段名\n参数4：获取记录的方式0所有行/1选中行，默认为0\n参数5：需要使用对象方式的key列表，逗号分隔（可选）\n返回值为字符串类型。",
+        "example":"VConvertKeyValueEntityToJson(\"实体1\",\"code\",\"value\",0,\"code1,code2\") 返回拼装后key-value形式的json",
+        "entry": "com.toone.v3.platform.function.client.VConvertKeyValueEntityToJson.main",
+        "defineUrl": "./dist/index.js",
+        "debugUrl":"./test/index.js",
+        "inputs": []
+    }]
+}
