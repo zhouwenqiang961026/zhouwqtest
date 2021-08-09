@@ -1,7 +1,7 @@
 {
     "groupId": "com.toone.v3.platform",
     "code": "Webfunc_SetCookie",
-    "version":"3.5.0",
+    "version":"3.6.0",
     "plugins": [{
         "type": "function",
         "code": "SetCookie",
@@ -45,7 +45,7 @@
         ],
         "output": {
             "type": "boolean",
-            "desc": ""
+            "desc": "是否成功"
         }
     }]
 }
