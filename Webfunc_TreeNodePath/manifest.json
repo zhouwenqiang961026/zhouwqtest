@@ -34,8 +34,8 @@
         }
         ],
         "output": {
-            "type": "text",
-            "desc": ""
+            "type": "char",
+            "desc": "返回树选中节点的路径"
         }
     }]
 }
