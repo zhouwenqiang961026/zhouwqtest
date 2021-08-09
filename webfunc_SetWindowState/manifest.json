@@ -1,7 +1,7 @@
 {
     "groupId": "com.toone.v3.platform",
     "code": "webfunc_SetWindowState",
-    "version":"3.1.0",
+    "version":"3.2.0",
     "plugins": [{
         "type": "function",
         "code": "SetWindowState",
@@ -17,10 +17,6 @@
             "desc": "窗体状态",
             "required": true
         }
-        ],
-        "output": {
-            "type": "void",
-            "desc": ""
-        }
+        ]
     }]
 }
