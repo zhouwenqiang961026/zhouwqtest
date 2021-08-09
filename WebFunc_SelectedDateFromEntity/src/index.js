@@ -9,20 +9,14 @@
  *  
  *  返回值
  */
-var main = function(param) {
-    var args = param.getArgs();
-    if (args.length != 3)
-        exceptionHandler("函数 SelectedDateFromEntity 参数个数必须为3个!");
-
-    var widgetCode = args[0];
+vds.import("vds.exception.*", "vds.ds.*", "vds.widget.*");
+var main = function (widgetCode, entityCode, fieldName) {
     if (!widgetCode)
         exceptionHandler("函数 SelectedDateFromEntity 第一个参数,控件Code不能为空!");
 
-    var entityCode = args[1];
     if (!entityCode)
         exceptionHandler("函数 SelectedDateFromEntity 第二个参数,实体名称不能为空!");
 
-    var fieldName = args[2];
     if (!fieldName)
         exceptionHandler("函数 SelectedDateFromEntity 第三个参数,实体字段名称不能为空!");
 
@@ -36,12 +30,24 @@ var main = function(param) {
                     value = record.get(fieldName);
                 dates.push(value);
             }
-            widgetAction.executeWidgetAction(widgetCode, "selectCellByDate", dates);
+            vds.widget.execute(widgetCode, "selectCellByDate", [dates]);
         } else {
             // 执行清空所有选中项
-            widgetAction.executeWidgetAction(widgetCode, "clearSelectedCell");
+            vds.widget.execute(widgetCode, "clearSelectedCell");
         }
     }
     return true;
-}
-export{    main}
+};
+
+var exceptionHandler = function (message) {
+    var exception = vds.exception.newConfigException(message);
+    throw exception;
+};
+
+
+var _getDataSource = function (dsName) {
+    // 仅支持前台实体
+    var datasource = vds.ds.lookup(dsName);
+    return datasource;
+};
+export { main }
