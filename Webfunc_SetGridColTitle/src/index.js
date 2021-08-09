@@ -8,33 +8,30 @@
     参数3：修改的标题，必填（字符串类型，个数要与参数2对应）
  *
  */
-vds.import("vds.exception.*");
-var main = function (param) {
+vds.import("vds.exception.*", "vds.object.*", "vds.widget.*");
+var main = function (widgetCode, fieldStr, titleStr) {
     //获取函数传入的参数
-    var args = param.getArgs();
-    var widgetCode = args[0];
-    var fieldStr = args[1];
-    var titleStr = args[2];
-    if( widgetCode== undefined || widgetCode=== ""){
+    if (vds.object.isUndefOrNull(widgetCode) || widgetCode === "") {
         var exception = vds.exception.newConfigException("列表控件名不能为空！");
-        throw exception;			
+        throw exception;
     }
-    if( fieldStr== undefined || fieldStr=== ""){
+    if (vds.object.isUndefOrNull(fieldStr) || fieldStr === "") {
         var exception = vds.exception.newConfigException("需要修改的字段名不能为空！");
-        throw exception;			
+        throw exception;
     }
-    if( titleStr== undefined || titleStr=== ""){
+    if (vds.object.isUndefOrNull(titleStr) || titleStr === "") {
         var exception = vds.exception.newConfigException("需要设置的列标题不能为空！");
-        throw exception;			
+        throw exception;
     }
-    var widget = widgetContext.get(widgetCode, "widgetObj");
+
+    var widget = vds.widget.getProperty(widgetCode, "widgetObj");
     var fieldList = fieldStr.split(",");
     var titleList = titleStr.split(",");
-    for(var i = 0;i< fieldList.length;i++){
+    for (var i = 0; i < fieldList.length; i++) {
         var field = widget.getFieldByName(fieldList[i]);
-        if(field){
-            widget.setFieldTitle(fieldList[i],titleList[i]);
-        }	
+        if (field) {
+            widget.setFieldTitle(fieldList[i], titleList[i]);
+        }
     }
 }
-export{    main}
+export { main }
