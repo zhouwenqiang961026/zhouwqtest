@@ -2,15 +2,11 @@
  *  SetCurrentWindowTitle("编辑");
  *
  */
-var main = function (param){
-    var args = param.getArgs(),
-    argsLen = args ? args.length : 0,
-            newTitle = argsLen >= 1 ? args[0] : null;
-        if (newTitle == null)
-            return;
-    var scope = scopeManager.getWindowScope();
-    if(scope){
-        windowContainerManager.updateTitleByScopeId(scope.getInstanceId(),newTitle);
-    }
+vds.import("vds.object.*", "vds.window.*");
+var main = function (newTitle) {
+    if (vds.object.isUndefOrNull(newTitle))
+        return;
+
+    vds.window.setTitle(newTitle);
 }
-export{    main}
+export { main }

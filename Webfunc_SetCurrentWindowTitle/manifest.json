@@ -1,26 +1,24 @@
 {
     "groupId": "com.toone.v3.platform",
     "code": "Webfunc_SetCurrentWindowTitle",
-    "version":"3.4.0",
-    "plugins": [{
-        "type": "function",
-        "code": "SetCurrentWindowTitle",
-        "name": "设置当前窗体标题",
-        "desc": "设置当前窗体标题。\n参数一：窗体标题（字符串类型）；\n返回值类型：无返回值。",
-        "example":"SetCurrentWindowTitle(\"编辑\") ，以浏览器窗口打开，则更改浏览器窗口标题；以模态窗体打开，则更改模态窗体标题。 ",
-        "entry": "com.toone.v3.platform.function.client.SetCurrentWindowTitle.main",
-        "defineUrl": "./dist/index.js",
-        "debugUrl":"./test/index.js",
-        "inputs": [
+    "version": "3.4.0",
+    "plugins": [
         {
-            "type": "text",
-            "desc": "窗体标题",
-            "required": true
+            "type": "function",
+            "code": "SetCurrentWindowTitle",
+            "name": "设置当前窗体标题",
+            "desc": "设置当前窗体标题。\n参数一：窗体标题（字符串类型）；\n返回值类型：无返回值。",
+            "example": "SetCurrentWindowTitle(\"编辑\") ，以浏览器窗口打开，则更改浏览器窗口标题；以模态窗体打开，则更改模态窗体标题。 ",
+            "entry": "com.toone.v3.platform.function.client.SetCurrentWindowTitle.main",
+            "defineUrl": "./dist/index.js",
+            "debugUrl": "./test/index.js",
+            "inputs": [
+                {
+                    "type": "text",
+                    "desc": "窗体标题",
+                    "required": true
+                }
+            ]
         }
-        ],
-        "output": {
-            "type": "void",
-            "desc": ""
-        }
-    }]
+    ]
 }
