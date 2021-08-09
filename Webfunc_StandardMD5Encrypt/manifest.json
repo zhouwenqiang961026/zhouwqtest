@@ -28,7 +28,7 @@
         ],
         "output": {
             "type": "text",
-            "desc": ""
+            "desc": "解密结果"
         }
     }]
 }
