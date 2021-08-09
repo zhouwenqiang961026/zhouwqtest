@@ -8,38 +8,36 @@
     参数3：是否只读，必填（布尔类型）
  *
  */
-vds.import("vds.exception.*");
-var main = function (param) {
+vds.import("vds.exception.*", "vds.object.*");
+var main = function (widgetCode, fieldStr, readOnly) {
     //获取函数传入的参数
-    var args = param.getArgs();
-    var widgetCode = args[0];
-    var fieldStr = args[1];
-    var readOnly = args[2];
-    if( widgetCode== undefined || widgetCode=== ""){
+
+    if (vds.object.isUndefOrNull(widgetCode) || widgetCode=== "") {
         var exception = vds.exception.newConfigException("列表控件名不能为空！");
-        throw exception;			
+        throw exception;
     }
-    if( fieldStr== undefined || fieldStr=== ""){
+    if (vds.object.isUndefOrNull(fieldStr) || fieldStr=== "") {
         var exception = vds.exception.newConfigException("需要设置的字段名不能为空！");
-        throw exception;			
+        throw exception;
     }
-    if( readOnly== undefined || readOnly=== ""){
+    if (vds.object.isUndefOrNull(readOnly) || readOnly=== "") {
         var exception = vds.exception.newConfigException("需要设置的只读值不能为空！");
-        throw exception;			
+        throw exception;
     }
-    var widget = widgetContext.get(widgetCode, "widgetObj");
+
+    var widget = vds.widget.getProperty(widgetCode, "widgetObj");
     var fieldList = fieldStr.split(",");
-    if(readOnly == "false" || readOnly == false){
+    if (readOnly == "false" || readOnly == false) {
         readOnly = false;
-    }else{
+    } else {
         readOnly = true;
     }
-    for(var i = 0;i< fieldList.length;i++){
+
+    for (var i = 0; i < fieldList.length; i++) {
         var field = widget.getFieldByName(fieldList[i]);
-        if(field){
-            field.canEdit = !readOnly; 
+        if (field) {
+            field.canEdit = !readOnly;
         }
     }
-    
 }
-export{    main}
+export { main }
