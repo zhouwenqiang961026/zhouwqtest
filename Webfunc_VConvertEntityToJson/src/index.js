@@ -1,20 +1,9 @@
-/**
- * 
- */
 //规则主入口(必须有)
-var main = function (param) {
-    var args = param.getArgs();
-    // 参数1：实体名称
-    var entityCode = args[0];
-    // 参数2：获取记录的方式0所有行/1选中行，默认为0
-    var recordType = args[1];
-    // 参数3：需要变成对象的字段列表，逗号隔开
-    var objFieldString = args[2];
-
+vds.import("vds.ds.*", "vds.expression.*", "vds.exception.*", "vds.string.*", "vds.obj.*");
+var main = function (entityCode, recordType, objFieldString) {
     var records = [];
-    var routeContext = param.getRouteContext();
     //获取数据源
-    var datasource = GetDataSource(entityCode, routeContext);
+    var datasource = GetDataSource(entityCode);
 
     if (1 == recordType)
         records = datasource.getSelectedRecords().toArray(); // 注意返回值对象有改变
@@ -42,7 +31,7 @@ var main = function (param) {
                 for (var h = 0; h < objFields.length; h++) {
                     var objField = objFields[h];
                     if (objField == fieldCode) {
-                        fieldValue = jsonUtil.json2obj(fieldValue);
+                        fieldValue = vds.object.stringify(fieldValue);
                         dataMap[fieldCode] = fieldValue;
                         break;
                     }
@@ -54,32 +43,30 @@ var main = function (param) {
         dataMaps.push(dataMap);
     }
 
-    var json = jsonUtil.obj2json(dataMaps);
+    var json = vds.string.toJson(dataMaps);
     return json;
 };
 
-function GetDataSource(ds, routeContext) { //获取数据源
+var GetDataSource = function (ds) { //获取数据源
     var dsName = ds;
     var datasource = null;
-    if (DBFactory.isDatasource(dsName)) {
+    if (vds.ds.isDatasource(dsName)) {
         datasource = dsName;
     } else {
-        var context = new ExpressionContext();
-        context.setRouteContext(routeContext);
         if (dsName.indexOf(".") == -1 && dsName.indexOf("@") == -1) {
-            datasource = manager.lookup({
-                "datasourceName": dsName
-            });
+            datasource = vds.ds.lookup(dsName);
         } else {
-            datasource = engine.execute({
-                "expression": dsName,
-                "context": context
-            });
+            datasource = vds.expression.execute(dsName);
         }
     }
-    if (!datasource) throw new Error("找不到函数VConvertEntityToJson参数中的实体！");
+
+    if (!datasource) {
+        throw vds.exception.newConfigException("找不到函数VConvertEntityToJson参数中的实体！");
+    }
+
     return datasource;
-}
+};
+
 export {
     main
 }
