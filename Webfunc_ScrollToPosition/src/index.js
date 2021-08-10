@@ -5,48 +5,53 @@
     无返回值
  *
  */
-vds.import("vds.exception.*");
-var main = function (param) {
+vds.import("vds.exception.*", "vds.widget.*");
+var main = function (widgetCode) {
     //获取函数传入的参数
-    var args = param.getArgs();
-    var widgetCode = args[0];
-    if( widgetCode== undefined || widgetCode=== ""){
+    if (vds.object.isUndefOrNull(widgetCode)) {
         var exception = vds.exception.newConfigException("ScrollToPosition函数，控件编码不能为空！");
-        throw exception;			
+        throw exception;
     }
-    var widget = widgetContext.get(widgetCode, "widgetObj");
-    if(widget){
+
+    var widget = vds.widget.getProperty(widgetCode, "widgetObj");
+    if (widget) {
         var scopeId = widget.getScopeId();
-        var containerId = windowRelation.getByScopeId(scopeId);
+        var containerId = vds.widget.scrollTo(scopeId);
         var positionDom = widget.getClipHandle();
         //var topX = widget.getOffsetTop();
         //var leftY = widget.getOffsetLeft();
         var topX = $(positionDom).offset().top;
         var leftY = $(positionDom).offset().left;
-        if(containerId){
-            var container = windowRelation.get(containerId);
-            if(container.ele){
+        if (containerId) {
+            var container = vds.widget.scrollTo(containerId);
+            if (container.ele) {
                 var scrollEle = container.ele;
-                var containerTop = $('#'+scrollEle).offset().top;
-                var containerLeft = $('#'+scrollEle).offset().left;
-                topX = topX-containerTop;
-                leftY = leftY-containerLeft;
-                $('#'+scrollEle).animate({
-                    scrollTop: topX }, 0);
-                $('#'+scrollEle).animate({
-                    scrollLeft: leftY },0)
-            }else{
+                var containerTop = $('#' + scrollEle).offset().top;
+                var containerLeft = $('#' + scrollEle).offset().left;
+                topX = topX - containerTop;
+                leftY = leftY - containerLeft;
+                $('#' + scrollEle).animate({
+                    scrollTop: topX
+                }, 0);
+                $('#' + scrollEle).animate({
+                    scrollLeft: leftY
+                }, 0)
+            } else {
                 $('html, body').animate({
-                    scrollTop:topX }, 0);
+                    scrollTop: topX
+                }, 0);
                 $("html, body").animate({
-                    scrollLeft:leftY },0);
+                    scrollLeft: leftY
+                }, 0);
             }
-        }else{
+        } else {
             $('html, body').animate({
-                scrollTop: topX }, 0);
+                scrollTop: topX
+            }, 0);
             $("html, body").animate({
-                scrollLeft:leftY },0);
+                scrollLeft: leftY
+            }, 0);
         }
     }
-}
-export{    main}
+};
+export { main }
