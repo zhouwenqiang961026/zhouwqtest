@@ -1,16 +1,22 @@
 {
     "groupId": "com.toone.v3.platform",
     "code": "Webfunc_VConvertEntityToXML",
-    "version":"3.5.0",
-    "plugins": [{
-        "type": "function",
-        "code": "VConvertEntityToXML",
-        "name": "前台实体转换为XML",
-        "desc": "前台实体转换为XML。\n参数1-N:前台实体名称，可动态添加（字符串）,\n返回值为字符串类型。 ",
-        "example":"VConvertEntityToXML(\"实体1\",\"实体2\") 返回拼装后的XML内容",
-        "entry": "com.toone.v3.platform.function.client.VConvertEntityToXML.main",
-        "defineUrl": "./dist/index.js",
-        "debugUrl":"./test/index.js",
-        "inputs": []
-    }]
+    "version": "3.5.0",
+    "plugins": [
+        {
+            "type": "function",
+            "code": "VConvertEntityToXML",
+            "name": "前台实体转换为XML",
+            "desc": "前台实体转换为XML。\n参数1-N:前台实体名称，可动态添加（字符串）,\n返回值为字符串类型。 ",
+            "example": "VConvertEntityToXML(\"实体1\",\"实体2\") 返回拼装后的XML内容",
+            "entry": "com.toone.v3.platform.function.client.VConvertEntityToXML.main",
+            "defineUrl": "./dist/index.js",
+            "debugUrl": "./test/index.js",
+            "inputs": [],
+            "output": {
+                "type": "char",
+                "desc": "实体数据转换成XML信息"
+            }
+        }
+    ]
 }
