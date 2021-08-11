@@ -12,4 +12,4 @@ var main = function(param) {
     return hostUrl;
     
 }
-export{    main}
+export{ main}
